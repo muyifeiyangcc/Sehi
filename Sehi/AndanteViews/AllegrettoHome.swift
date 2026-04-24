@@ -10,7 +10,7 @@ struct AllegrettoHome: View {
         let bridtrige = OstinatoPosts().getImagePosts()
 
         if rtamentoType {
-           
+        
             return bridtrige
         } else {
            

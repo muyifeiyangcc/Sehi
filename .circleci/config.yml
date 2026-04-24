@@ -48,7 +48,8 @@ jobs:
           name: Install Bundler & Gems
           command: |
             gem install bundler
-            bundle install --path vendor/bundle
+            bundle config set path 'vendor/bundle'
+            bundle install
 
       - save_cache:
           paths:
@@ -58,7 +59,7 @@ jobs:
       - run:
           name: Run Fastlane
           command: bundle exec fastlane release
-      
+
       - run:
           name: Zip ipa
           command: |
